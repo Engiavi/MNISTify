@@ -28,3 +28,8 @@ model.fit(x_train, y_train, epochs=3)
 model.save('MNISTify.keras')
 
 model = tf.keras.models.load_model('MNISTify.keras')
+
+loss,accuracy = model.evaluate(x_test, y_test)
+
+print("loss: ",loss)
+print("accuracy: ",accuracy)
