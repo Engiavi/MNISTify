@@ -25,6 +25,6 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=3)
 
-model.save('MNISTify.model')
+model.save('MNISTify.keras')
 
-model = tf.keras.models.load_model('MNISTify.model')
+model = tf.keras.models.load_model('MNISTify.keras')
