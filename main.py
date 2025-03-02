@@ -23,4 +23,8 @@ model.compile(optimizer='adam',
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'])
 
-model.fit(x_train, y_train)
+model.fit(x_train, y_train, epochs=3)
+
+model.save('MNISTify.model')
+
+model = tf.keras.models.load_model('MNISTify.model')
